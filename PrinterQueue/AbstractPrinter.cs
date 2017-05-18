@@ -24,6 +24,6 @@
         public bool Color;
 
         //Тип принтера
-        public string Type;
+        public int Type;
     }
 }
