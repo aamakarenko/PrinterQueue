@@ -11,13 +11,15 @@ namespace PrinterQueue
         public LazerPrinter(int Capacity)
         {
             // Ёмкость лотка "бесконечный"  
-            Capacity = -1;
+            this.Capacity = -1;
 
             // Ёмкость лотка "100 листов"
-            Capacity = Capacity;
+            this.Capacity = Capacity;
 
             //Цветная печать
-            Color = false;
+            this.Color = false;
+
+            this.Type = "Lazer";
         }
     }
 }

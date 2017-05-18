@@ -11,13 +11,15 @@ namespace PrinterQueue
         public MatrixPrinter()
         {
             //Определим "бесконечную" ёмкость лотка для матричного принтера = -1
-            Capacity = -1;
+            this.Capacity = -1;
 
             //Предположим, что скорость печати матричного принтера равна эквиваленту 10 л/ч
-            Speed = 10;
+            this.Speed = 10;
 
             //Цветная печать
-            Color = false;
+            this.Color = false;
+
+            this.Type = "Matrix";
         }
     }
 }

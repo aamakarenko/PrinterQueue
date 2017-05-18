@@ -22,5 +22,8 @@
 
         //Признак цветной печати
         public bool Color;
+
+        //Тип принтера
+        public string Type;
     }
 }

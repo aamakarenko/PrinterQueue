@@ -11,10 +11,12 @@ namespace PrinterQueue
         public JetPrinter(bool Color)
         {
             //Ёмкость лотка "100 листов"
-            Capacity = 100;
+            this.Capacity = 100;
 
             //Цветная печать
-            Color = Color;
+            this.Color = Color;
+
+            this.Type = "Jet";
         }
     }
 }

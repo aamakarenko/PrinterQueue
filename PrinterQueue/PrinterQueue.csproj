@@ -55,6 +55,7 @@
     <Compile Include="JetPrinter.cs" />
     <Compile Include="LazerPrinter.cs" />
     <Compile Include="MatrixPrinter.cs" />
+    <Compile Include="PrinterJob.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
