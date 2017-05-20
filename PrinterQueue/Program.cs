@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PrinterQueue
@@ -16,6 +13,8 @@ namespace PrinterQueue
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Simple s = new Simple();
+            s.Run();
             Application.Run(new Form1());
         }
     }

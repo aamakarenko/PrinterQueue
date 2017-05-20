@@ -1,25 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PrinterQueue
+﻿namespace PrinterQueue
 {
     public class LazerPrinter : AbstractPrinter
     {
-        public LazerPrinter(int Capacity)
+        public LazerPrinter(string PrinterName)
         {
+            //Имя принтера
+            this.Name = PrinterName;
+
             // Ёмкость лотка "бесконечный"  
             this.Capacity = -1;
 
-            // Ёмкость лотка "100 листов"
-            this.Capacity = Capacity;
+            //Скорость печати (л./мин.)
+            this.Speed = 10;
+
+            //Разрешение
+            this.Resolution = 100;
 
             //Цветная печать
             this.Color = false;
 
-            this.Type = "Lazer";
+            //Тип принтера
+            this.Type = 3;
+        }
+
+        public LazerPrinter(string PrinterName, int Capacity)
+        {
+            //Имя принтера
+            this.Name = PrinterName;
+
+            // Ёмкость лотка
+            this.Capacity = Capacity;
+
+            //Скорость печати (л./мин.)
+            this.Speed = 10;
+
+            //Разрешение
+            this.Resolution = 100;
+
+            //Цветная печать
+            this.Color = false;
+
+            //Тип принтера
+            this.Type = 3;
         }
     }
 }

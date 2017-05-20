@@ -55,9 +55,12 @@
     <Compile Include="JetPrinter.cs" />
     <Compile Include="LazerPrinter.cs" />
     <Compile Include="MatrixPrinter.cs" />
-    <Compile Include="PrinterJob.cs" />
+    <Compile Include="Job.cs" />
+    <Compile Include="PrinterPool.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JobQueue.cs" />
+    <Compile Include="Simple.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

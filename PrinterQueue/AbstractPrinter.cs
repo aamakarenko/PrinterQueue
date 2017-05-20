@@ -1,29 +1,72 @@
-﻿namespace PrinterQueue
+﻿using System;
+
+namespace PrinterQueue
 {
     public abstract class AbstractPrinter
     {
         //Название принтера
-        public string Name;
+        protected string Name;
 
         //Максимальная высота печатного листа
-        public int MaxHeight;
+        protected int MaxHeight;
 
         //Максимальная ширина печатного листа
-        public int MaxWidth;
+        protected int MaxWidth;
 
         //Максимальное разрешение
-        public int Resolution;
+        protected int Resolution;
 
         //Скорость печати (кол-во листов единицу времени(такт))
-        public int Speed;
+        protected int Speed;
 
         //Ёмкость лотка подачи листов
-        public int Capacity;
+        protected int Capacity;
 
         //Признак цветной печати
-        public bool Color;
+        protected bool Color;
 
         //Тип принтера
-        public int Type;
+        protected int Type;
+
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public int GetMaxHeight()
+        {
+            return MaxHeight;
+        }
+
+        public int GetResolution()
+        {
+            return Resolution;
+        }
+
+        public int GetSpeed()
+        {
+            return Speed;
+        }
+
+        public int GetCapacity()
+        {
+            return Capacity;
+        }
+
+        public bool IsColor()
+        {
+            return Color;
+        }
+
+        public int GetPrinterType()
+        {
+            return Type;
+        }
+
+        public void Print(Job Job)
+        {
+            Console.WriteLine("Печать задания на принтере " + this.Name + "\n" + 
+                "Кол-во листов печати: " + Job.GetPageCount());
+        }
     }
 }

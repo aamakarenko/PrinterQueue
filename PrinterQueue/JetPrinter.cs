@@ -1,22 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PrinterQueue
+﻿namespace PrinterQueue
 {
     public class JetPrinter : AbstractPrinter
     {
-        public JetPrinter(bool Color)
+        public JetPrinter(string PrinterName, bool Color)
         {
+            //Имя принтера
+            this.Name = PrinterName;
+
             //Ёмкость лотка "100 листов"
-            this.Capacity = 100;
+            this.Capacity = 1000;
+
+            //Скорость печати принтера (л./мин.)
+            this.Speed = 10;
+
+            //Разрешение принтера
+            this.Resolution = 100;
 
             //Цветная печать
             this.Color = Color;
 
-            this.Type = "Jet";
+            //Тип принтера
+            this.Type = 2;
         }
     }
 }
