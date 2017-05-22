@@ -1,6 +1,8 @@
-﻿namespace PrinterQueue
+﻿using System;
+
+namespace PrinterQueue.PrinterEquipment
 {
-    public class MatrixPrinter : AbstractPrinter
+    class MatrixPrinter : AbstractPrinter
     {
         public MatrixPrinter(string PrinterName)
         {
@@ -21,6 +23,17 @@
 
             //Тип принтера
             this.Type = 1;
+        }
+
+        public override Type GetType()
+        {
+            return GetType();
+        }
+
+        protected override void Print(Job Job)
+        {
+            Console.WriteLine("Печать задания на принтере " + this.Name + "\n" +
+                    "Кол-во листов печати: " + Job.GetPageCount());
         }
     }
 }

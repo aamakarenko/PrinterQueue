@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PrinterQueue
+namespace PrinterQueue.PrinterEquipment
 {
     public abstract class AbstractPrinter
     {
@@ -63,10 +63,8 @@ namespace PrinterQueue
             return Type;
         }
 
-        public void Print(Job Job)
-        {
-            Console.WriteLine("Печать задания на принтере " + this.Name + "\n" + 
-                "Кол-во листов печати: " + Job.GetPageCount());
-        }
+        protected abstract void Print(Job Job);
+
+        public abstract new Type GetType();
     }
 }

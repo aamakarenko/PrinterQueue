@@ -1,4 +1,4 @@
-﻿using System;
+﻿using PrinterQueue.PrinterEquipment;
 
 namespace PrinterQueue
 {
@@ -30,21 +30,32 @@ namespace PrinterQueue
             JobQueue.Add(job5);
             JobQueue.Add(job6);
             JobQueue.Add(job7);
+
             JobQueue.Remove(job4);
 
-            foreach (var i in JobQueue.List())
-            {
-                var p = pool.SearchGoodPrinter(i);
-                if (p != null)
-                {
-                    p.Print(i);
-                }
-                else
-                {
-                    Console.WriteLine("Для задания " + i.ToString() + " не найден походящий принтер");
-                }
+            pool.PrintJobs(JobQueue.List());
+            
+
+            //object i = Utils.GetRandomObject(pool.GetAll());
+            //Type t = i.GetType();
+            //MethodInfo Print = t.GetMethod("Print");
+            //Console.WriteLine(Print.Invoke(i, new object[] { job1 } ));
+
+            //pool.Delete(jet);
+
+            //foreach (var i in JobQueue.List())
+            //{
+            //    var p = pool.SearchGoodPrinter(i);
+            //    if (p != null)
+            //    {
+            //        p.Print(i);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Для задания " + i.ToString() + " не найден походящий принтер");
+            //    }
                 
-            }
+            //}
         }
     }
 }
