@@ -1,4 +1,5 @@
 ﻿using PrinterQueue.PrinterEquipment;
+using System;
 
 namespace PrinterQueue
 {
@@ -31,9 +32,11 @@ namespace PrinterQueue
             JobQueue.Add(job6);
             JobQueue.Add(job7);
 
-            JobQueue.Remove(job4);
+            //JobQueue.Remove(job4);
 
             pool.PrintJobs(JobQueue.List());
+
+            Console.WriteLine(JobQueue.Next().ToString() + "Next" + JobQueue.Next().ToString());
             
 
             //object i = Utils.GetRandomObject(pool.GetAll());

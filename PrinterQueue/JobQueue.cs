@@ -47,6 +47,15 @@ namespace PrinterQueue
 
         public static List<Job> List()
         {
+            var result = jobQueue.ToList();
+
+            jobQueue.Clear();
+
+            return result;
+        }
+
+        public static List<Job> GetList()
+        {
             return jobQueue.ToList();
         }
 
