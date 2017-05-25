@@ -63,13 +63,10 @@ namespace PrinterQueue.PrinterEquipment
 
         public void PrintJob(Job Job)
         {
-            object i = SearchGoodPrinter(Job);
+            AbstractPrinter i = SearchGoodPrinter(Job);
             if (i != null)
             {
-                Type t = i.GetType();
-                MethodInfo Print = t.GetMethod("Print", BindingFlags.Instance | BindingFlags.NonPublic);
-
-                Console.WriteLine(Print.Invoke(i, new object[] { Job }));
+                Console.WriteLine(i.Print(Job));
             }
             else
             {
